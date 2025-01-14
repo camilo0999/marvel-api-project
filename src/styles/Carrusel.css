@@ -1,0 +1,109 @@
+.carrusel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+}
+
+.carrusel {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.carrusel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: red;
+  z-index: 1;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.carrusel-button:hover {
+  background-color: #333;
+}
+
+.carrusel-button.prev {
+  left: 10px;
+}
+
+.carrusel-button.next {
+  right: 10px;
+}
+
+.carrusel-button:hover {
+  color: #ccc;
+}
+
+.carrusel-images {
+  display: flex;
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.carrusel-image {
+  flex: 0 0 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+  .carrusel-button {
+    font-size: 20px;
+  }
+
+  .carrusel-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    
+}
+
+@media screen and (max-width: 960px) {
+  .carrusel-button {
+    font-size: 20px;
+  }
+
+  .carrusel-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+    
+}
+
+@media screen and (max-width: 768px) {
+  .carrusel-button {
+    font-size: 20px;
+  }
+
+  .carrusel-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carrusel-button {
+    font-size: 14px;
+  }
+  .carrusel-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,228 @@
+.inicio {
+  margin-top: 50px;
+  background-color: #191919;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+.title h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.loading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.inicio-featured-section .title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(243, 241, 241, 0.5);
+}
+
+.inicio-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.inicio-card {
+  background-color: #202020;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(146, 146, 146, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: auto;
+  border-radius: 8px;
+  max-width: 300px;
+  flex: 1 1 calc(33.333% - 40px); /* Tres tarjetas por fila */
+  display: flex;
+  flex-direction: column;
+}
+
+.inicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(211, 211, 211, 0.3);
+}
+
+.inicio-card-header {
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+}
+
+.inicio-card-header h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(243, 241, 241, 0.5);
+  margin: 0;
+  height: 60px; /* Altura fija para el título */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicio-card-body {
+  position: relative;
+  flex: 1; /* Llenar el espacio restante */
+}
+
+.inicio-card-body img {
+  width: 100%;
+  min-width: 240px;
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+}
+
+.inicio-card-footer {
+  padding: 15px;
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #333;
+}
+
+.inicio-card-footer a {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.inicio-card-footer a:hover {
+  background-color: #444;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .inicio-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicio-card {
+    flex: 1 1 100%; /* Una tarjeta por fila */
+    max-width: 100%;
+  }
+
+  .inicio-card-body img {
+    width: 90vw; /* Ajustar la altura de la imagen al ancho de la pantalla */
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .inicio-content {
+    flex-wrap: wrap;
+  }
+  
+}
+
+
+.random-info {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.video {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 560px;
+}
+
+.description p {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  text-align: justify;
+}
+
+.random-info h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: yellow;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(243, 241, 241, 0.5);
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .random-info {
+    flex-direction: column;
+  }
+
+  .description p {
+    font-size: 1rem;
+  }
+
+  .random-info h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .description p {
+    font-size: 0.8rem;
+  }
+
+  .random-info h2 {
+    font-size: 1.2rem;
+  }
+}
